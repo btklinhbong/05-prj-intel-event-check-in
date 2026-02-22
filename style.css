@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -346,6 +347,56 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+/* Attendee list */
+.attendee-list-section {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 2px solid #f1f5f9;
+  text-align: left;
+}
+
+.attendee-list-section h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.attendee-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.attendee-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.attendee-list-name {
+  color: #334155;
+  font-weight: 500;
+}
+
+.attendee-list-team {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.reset-section {
+  margin-top: 20px;
+}
+
+#resetBtn {
+  margin: 0 auto;
+  min-width: 180px;
 }
 
 /* Mobile responsive */
