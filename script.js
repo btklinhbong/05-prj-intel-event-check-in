@@ -2,6 +2,7 @@
 const form = document.getElementById('checkInForm');
 const nameInput = document.getElementById('attendeeName');
 const teamSelect = document.getElementById('teamSelect');
+const greeting = document.getElementById('greeting');
 
 // Track attendance
 let count = 0;
@@ -12,7 +13,7 @@ form.addEventListener("submit", function(event) {
   event.preventDefault(); // Prevent form from submitting normally
 
   // Get form values
-  const name = nameInput.value;
+  const name = nameInput.value.trim();
   const team = teamSelect.value;
   const teamName = teamSelect.options[teamSelect.selectedIndex].text;
 
@@ -39,8 +40,13 @@ form.addEventListener("submit", function(event) {
   // Show welcome message
   const message = "Welcome " + name + "! You have checked in for " + teamName + ".";
   console.log(message);
-  alert(message);
+  greeting.textContent = message;
+  greeting.className = "success-message";
+  greeting.style.display = "block";
 
+  // Track and update the total number of attendees
+  const attendeeCount = document.getElementById("attendeeCount");
+  attendeeCount.textContent = count;
   // Reset form
   form.reset();
 });
