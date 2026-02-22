@@ -14,7 +14,7 @@ const resetButton = document.getElementById("resetBtn");
 
 // Track attendance
 let count = 0;
-const maxCount = 5;
+const maxCount = 6; // Set your attendance goal here
 let attendees = [];
 
 // Show max attendance goal in the UI
