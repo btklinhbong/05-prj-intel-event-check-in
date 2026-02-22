@@ -43,8 +43,12 @@ function getWinningTeamName() {
   if (winners.length === 1) {
     return winners[0].name;
   }
-
-  return `${winners[0].name} and ${winners[1].name}`;
+  else if (winners.length === 2) {
+    return `${winners[0].name} and ${winners[1].name}`;
+  }
+  else {
+    return "All teams are tied!";
+  }
 }
 
 // Handle from submission
